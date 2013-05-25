@@ -1,0 +1,6 @@
+Revision history for Web-Util-ExtPaging
+
+0.001000  2013-05-25 13:22:30 CST6CDT
+ - Initial Release, factored out of
+   Catalyst::TraitFor::Controller::DoesExtPaging
+
