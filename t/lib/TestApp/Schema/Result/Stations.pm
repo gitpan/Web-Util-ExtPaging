@@ -1,5 +1,5 @@
 package TestApp::Schema::Result::Stations;
-use parent 'DBIx::Class';
+use base 'DBIx::Class';
 use strict;
 use warnings;
 

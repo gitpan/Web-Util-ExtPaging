@@ -1,6 +1,6 @@
 package Web::Util::ExtPaging;
 {
-  $Web::Util::ExtPaging::VERSION = '0.001000';
+  $Web::Util::ExtPaging::VERSION = '0.001001';
 }
 
 # ABSTRACT: Paginate DBIx::Class::ResultSets for ExtJS consumption
@@ -63,7 +63,7 @@ Web::Util::ExtPaging - Paginate DBIx::Class::ResultSets for ExtJS consumption
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

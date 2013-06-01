@@ -21,4 +21,4 @@ requires:
 resources:
   bugtracker: https://github.com/frioux/Web-Util-ExtPaging/issues
   repository: git://github.com/frioux/Web-Util-ExtPaging.git
-version: 0.001000
+version: 0.001001
