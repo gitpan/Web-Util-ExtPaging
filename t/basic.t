@@ -72,6 +72,28 @@ my $rs = $schema->resultset('Stations')->search(undef, {
 }
 
 {
+   my $rs = $schema->resultset('Stations')->search(undef, {
+      columns => ['id'],
+      order_by => 'id',
+      rows => 3,
+      page => 1,
+      result_class => 'DBIx::Class::ResultClass::HashRefInflator',
+   });
+   my $data = ext_paginate($rs);
+
+   cmp_deeply $data, {
+       total => 9,
+       data=> set({
+          id => 1,
+       },{
+          id => 2,
+       },{
+          id => 3,
+       })
+   }, 'ext_paginate passes through HRI resultset';
+}
+
+{
    my $data = ext_parcel(
       [ map +{ id => $_->id }, $rs->all ],
       { total_property => 'totalAmount' },

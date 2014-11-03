@@ -1,8 +1,5 @@
 package Web::Util::ExtPaging;
-{
-  $Web::Util::ExtPaging::VERSION = '0.001001';
-}
-
+$Web::Util::ExtPaging::VERSION = '0.001002';
 # ABSTRACT: Paginate DBIx::Class::ResultSets for ExtJS consumption
 
 use strict;
@@ -26,7 +23,9 @@ sub ext_paginate {
    }
 
    return ext_parcel(
-      [map $_->$method, $resultset->all],
+      $resultset->result_class->isa('DBIx::Class::ResultClass::HashRefInflator') ?
+         [$resultset->all] :
+         [map $_->$method, $resultset->all],
       $resultset->is_paged
          ? ($resultset->pager->total_entries)
          : (),
@@ -57,13 +56,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Web::Util::ExtPaging - Paginate DBIx::Class::ResultSets for ExtJS consumption
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
@@ -193,7 +194,7 @@ Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

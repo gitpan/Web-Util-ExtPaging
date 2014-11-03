@@ -4,7 +4,7 @@
       "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "develop" : {
@@ -26,14 +26,14 @@
       },
       "runtime" : {
          "requires" : {
-            "Sub::Exporter::Progressive" : "0.001010"
+            "Sub::Exporter::Progressive" : "0.00101"
          }
       },
       "test" : {
          "requires" : {
-            "DBIx::Class" : "0.08250",
+            "DBIx::Class" : "0.0825",
             "SQL::Translator" : "0.11016",
-            "Test::Deep" : "0.110",
+            "Test::Deep" : "0.11",
             "Test::More" : "0.98"
          }
       }
@@ -43,12 +43,13 @@
       "bugtracker" : {
          "web" : "https://github.com/frioux/Web-Util-ExtPaging/issues"
       },
+      "homepage" : "https://github.com/frioux/Web-Util-ExtPaging",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/frioux/Web-Util-ExtPaging.git",
-         "web" : "http://github.com/frioux/Web-Util-ExtPaging"
+         "url" : "https://github.com/frioux/Web-Util-ExtPaging.git",
+         "web" : "https://github.com/frioux/Web-Util-ExtPaging"
       }
    },
-   "version" : "0.001001"
+   "version" : "0.001002"
 }
 
